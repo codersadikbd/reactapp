@@ -1,10 +1,7 @@
-import Header1 from "./componenet/Header1";
-import Nav from "./componenet/Nav";
 const App = () => {
   return (
     <div>
-      <Header1 />
-      <Nav />
+      <h1>My React App</h1>
     </div>
   );
 };
