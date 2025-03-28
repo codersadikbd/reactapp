@@ -1,14 +1,20 @@
 const App = () => {
-  const city = ["new york", "pakistan", "paris", "tokyo", "sydney"];
-  return (
-    <div>
-      <ol>
-        {city.map((city, index) => (
-          <li key={index}>{city}</li>
-        ))}
-      </ol>
-    </div>
-  );
+  const status = true;
+  if (status === true) {
+    return (
+      <div>
+        <h1>logout</h1>
+        <button>logout</button>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <h1>login</h1>
+        <button>login</button>
+      </div>
+    );
+  }
 };
 
 export default App;
