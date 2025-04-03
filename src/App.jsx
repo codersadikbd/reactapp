@@ -1,20 +1,14 @@
+import Hero from "./componenet/Hero";
+
 const App = () => {
-  const status = true;
-  if (status === true) {
-    return (
-      <div>
-        <h1>logout</h1>
-        <button>logout</button>
-      </div>
-    );
-  } else {
-    return (
-      <div>
-        <h1>login</h1>
-        <button>login</button>
-      </div>
-    );
-  }
+  const BtnClick = () => {
+    alert("HELLO WORLD");
+  };
+  return (
+    <div>
+      <Hero ChildBtnClick={BtnClick} />
+    </div>
+  );
 };
 
 export default App;
