@@ -1,12 +1,14 @@
-import Hero from "./componenet/Hero";
+import { useRef } from "react";
 
 const App = () => {
-  const BtnClick = () => {
-    alert("HELLO WORLD");
-  };
+  let number = useRef(0);
+  function change() {
+    number.current++;
+    console.log(number.current);
+  }
   return (
     <div>
-      <Hero ChildBtnClick={BtnClick} />
+      <button onClick={change}> Hey just click me </button>
     </div>
   );
 };
