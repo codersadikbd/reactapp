@@ -1,14 +1,20 @@
 import { useRef } from "react";
 
 const App = () => {
-  let number = useRef(0);
-  function change() {
-    number.current++;
-    console.log(number.current);
-  }
+  let APIData = useRef(null);
+  let MyPTag = useRef();
+  const fetchData = async () => {
+    const response = await fetch("https://dummyjson.com/products");
+    APIData.current = await response.json();
+  };
+  const showData = () => {
+    MyPTag.current.innerText = JSON.stringify(APIData.current);
+  };
   return (
     <div>
-      <button onClick={change}> Hey just click me </button>
+      <p ref={MyPTag}></p>
+      <button onClick={fetchData}>Call API </button>
+      <button onClick={showData}>Show Data</button>
     </div>
   );
 };
