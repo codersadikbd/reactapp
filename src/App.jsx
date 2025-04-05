@@ -13,14 +13,8 @@ const App = () => {
         <br />
         <input placeholder="Last name" />
         <br />
-        <select>
-          <option value="">Choose City</option>
-          <option value="Dhaka">Dhaka</option>
-          <option value="Chittagong">Chittagong</option>
-        </select>
-        <br />
-        <input type="radio" name="gender" /> Male
-        <input type="radio" name="gender" /> Female
+        <select></select>
+
         <br />
         <button type="submit">Submit</button>
       </form>
