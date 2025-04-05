@@ -22,7 +22,6 @@ const App = () => {
         <input type="radio" name="gender" /> Male
         <input type="radio" name="gender" /> Female
         <br />
-        <button type="submit">Submit</button>
       </form>
     </div>
   );
