@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const App = () => {
-  let [FormObj, setFor] = useState({
+  let [FormObj, setFormObj] = useState({
     fName: "",
     lName: "",
     city: "",
