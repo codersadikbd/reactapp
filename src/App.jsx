@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 const App = () => {
-  return <div></div>;
+  return (
+    <div className="container">
+      <form></form>
+    </div>
+  );
 };
 
 export default App;
