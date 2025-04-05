@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 const App = () => {
-  let [FormObj, setFormObj] = useState({
+  let [FormObj, setFor] = useState({
     fName: "",
     lName: "",
     city: "",
@@ -13,8 +13,14 @@ const App = () => {
         <br />
         <input placeholder="Last name" />
         <br />
-        <select></select>
-
+        <select>
+          <option value="">Choose City</option>
+          <option value="Dhaka">Dhaka</option>
+          <option value="Chittagong">Chittagong</option>
+        </select>
+        <br />
+        <input type="radio" name="gender" /> Male
+        <input type="radio" name="gender" /> Female
         <br />
         <button type="submit">Submit</button>
       </form>
