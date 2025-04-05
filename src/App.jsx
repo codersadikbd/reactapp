@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 const App = () => {
+  let [FormObj, setFormObj] = useState({
+    fName: "",
+    lName: "",
+    city: "",
+    gender: "",
+  });
   return (
     <div className="container">
       <form>
@@ -9,12 +15,12 @@ const App = () => {
         <br />
         <select>
           <option value="">Choose City</option>
-          <option value="">Dhaka</option>
-          <option value="">Chittagong</option>
+          <option value="Dhaka">Dhaka</option>
+          <option value="Chittagong">Chittagong</option>
         </select>
         <br />
-        <input type="radio" name="gender" value="male" /> Male
-        <input type="radio" name="gender" value="female" /> Female
+        <input type="radio" name="gender" /> Male
+        <input type="radio" name="gender" /> Female
         <br />
         <button type="submit">Submit</button>
       </form>
