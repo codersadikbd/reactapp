@@ -1,21 +1,48 @@
-import { useRef } from "react";
-
+import React, { useState } from "react";
 const App = () => {
-  let APIData = useRef(null);
-  let MyPTag = useRef();
-  const fetchData = async () => {
-    const response = await fetch("https://dummyjson.com/products");
-    APIData.current = await response.json();
+  const [list, setList] = useState([]);
+  const [item, setItem] = useState("");
+
+  const AddToList = () => {
+    list.push(item);
+    setList([...list]);
   };
-  const showData = () => {
-    MyPTag.current.innerText = JSON.stringify(APIData.current);
+
+  const RemoveItems = (index) => {
+    list.splice(index, 1);
+    setList([...list]);
   };
   return (
     <div>
-      <p ref={MyPTag}></p>
-      <button onClick={fetchData}>Call API </button>
-      <button onClick={showData}>Show Data</button>
+      <table>
+        <tbody>
+          {list.length !== 0 ? (
+            list.map((element, index) => {
+              return (
+                <tr>
+                  <td>{element}</td>
+                  <td>
+                    <button
+                      onClick={() => {
+                        RemoveItems(index);
+                      }}
+                    >
+                      Remove
+                    </button>
+                  </td>
+                </tr>
+              );
+            })
+          ) : (
+            <tr></tr>
+          )}
+        </tbody>
+      </table>
+
+      <input onChange={(e) => setItem(e.target.value)} placeholder="item" />
+      <button onClick={AddToList}>Add</button>
     </div>
   );
 };
+
 export default App;
