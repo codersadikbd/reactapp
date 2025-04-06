@@ -14,6 +14,7 @@ const App = () => {
   };
   const submitForm = (e) => {
     e.preventDefault();
+    console.log(FormObj);
   };
   return (
     <div className="container">
