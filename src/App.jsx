@@ -6,13 +6,10 @@ const App = () => {
     city: "",
     gender: "",
   });
-  const OnInputChange = () => {
+  const OnInputChange = (property, value) => {
     setFormObj((prevObj) => ({
       ...prevObj,
-      fName: "",
-      lName: "",
-      city: "",
-      gender: "",
+      [property]: value,
     }));
   };
   const submitForm = (e) => {
