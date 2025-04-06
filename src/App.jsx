@@ -9,9 +9,9 @@ const App = () => {
   return (
     <div className="container">
       <form>
-        <input placeholder="First name" />
+        <input value={FormObj.fName} placeholder="First name" />
         <br />
-        <input placeholder="Last name" />
+        <input value={FormObj.lName} placeholder="Last name" />
         <br />
         <select>
           <option value="">Choose City</option>
