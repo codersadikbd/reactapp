@@ -15,9 +15,12 @@ const App = () => {
       gender: "",
     }));
   };
+  const submitForm = (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="container">
-      <form>
+      <form onSubmit={submitForm}>
         <input
           onChange={(e) => {
             OnInputChange("fName", e.target.value);
@@ -26,9 +29,18 @@ const App = () => {
           placeholder="First name"
         />
         <br />
-        <input value={FormObj.lName} placeholder="Last name" />
+        <input
+          onChange={(e) => {
+            OnInputChange("lName", e.target.value);
+          }}
+          value={FormObj.lName}
+          placeholder="Last name"
+        />
         <br />
-        <select value={FormObj.city}>
+        <select
+          value={FormObj.city}
+          onChange={(e) => OnInputChange("city", e.target.value)}
+        >
           <option value="">Choose City</option>
           <option value="Dhaka">Dhaka</option>
           <option value="Chittagong">Chittagong</option>
@@ -38,12 +50,14 @@ const App = () => {
           checked={FormObj.gender === "Male"}
           type="radio"
           name="gender"
+          onChange={() => OnInputChange("gender", "Male")}
         />{" "}
         Male
         <input
           checked={FormObj.gender === "Female"}
           type="radio"
           name="gender"
+          onChange={() => OnInputChange("gender", "Female")}
         />{" "}
         Female
         <br />
