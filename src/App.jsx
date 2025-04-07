@@ -8,12 +8,12 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <routes>
+        <Routes>
           <route path="/" element={<HomePage />} />
           <route path="/Product" element={<ProductPage />} />
           <route path="/Profile" element={<ProfilePage />} />
           <route path="*" element={<NotFound />} />
-        </routes>
+        </Routes>
       </BrowserRouter>
     </div>
   );
