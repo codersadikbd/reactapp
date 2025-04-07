@@ -4,7 +4,7 @@ import App from "./App";
 import "milligram/dist/milligram.min.css";
 
 createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>
+  </StrictMode>
 );
