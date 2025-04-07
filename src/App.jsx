@@ -9,10 +9,10 @@ const App = () => {
     <div>
       <BrowserRouter>
         <Routes>
-          <route path="/" element={<HomePage />} />
-          <route path="/Product" element={<ProductPage />} />
-          <route path="/Profile" element={<ProfilePage />} />
-          <route path="*" element={<NotFound />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/Product" element={<ProductPage />} />
+          <Route path="/Profile" element={<ProfilePage />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
