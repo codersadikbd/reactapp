@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 const App = () => {
-  useEffect(() => {
-    console.log("Hello World");
-  });
+  useEffect(() => {}, []);
   return <div className="container"></div>;
 };
 
